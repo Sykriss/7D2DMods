@@ -1,0 +1,201 @@
+<VFX>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']"/>
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunScopeSmall" installable_tags="smallTopAttachments" modifier_tags="scope" blocked_tags="shotgun" type="attachment">
+			<property name="UnlockedBy" value="modGunScopeSmallSchematic"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			
+			<item_property_overrides name="*">
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+
+
+			<item_property_overrides name="gunPistol">
+				<property name="ScopeOffset" value="0,0.0851,-0.0761"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,-0.0215,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="gun44Magnum">
+				<property name="ScopeOffset" value="0,0.1037,0.0689"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,-0.015,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+
+			<item_property_overrides name="gunAK47">
+				<property name="ScopeOffset" value="0,0.088,-.1"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,0.0006,0.3"/>
+				<property name="ScopeRotation" value="1.3,0,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunSMG5">
+				<property name="ScopeOffset" value="0,0.0999,-0.2534"/>
+				<property name="ScopeScale" value="0.9,0.9,0.9"/>
+				<property name="ScopeCameraOffset" value="0,0.002,0.2"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunHuntingRifle">
+				<property name="ScopeOffset" value="0,0.075,0.005"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,-0.01425,0"/>
+				<property name="ScopeRotation" value="0.3,0,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunMR10">
+				<property name="ScopeOffset" value="0,0.0736,-0.1497"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,0.0029,0.1"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunRocketLauncher">
+				<property name="ScopeOffset" value="-.082,0.012,.186"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeRotation" value="0,0,80"/>
+				<property name="ScopeCameraOffset" value="0.0335,0.0733,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunCrossbowIron">
+				<property name="ScopeOffset" value="0,0.061,-0.0761"/>
+				<property name="ScopeScale" value=".9,.9,.9"/>
+				<property name="ScopeCameraOffset" value="0,-0.0074,0.13"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+			<item_property_overrides name="gunCrossbowCompound">
+				<property name="ScopeOffset" value="0,0.092,-0.06"/>
+				<property name="ScopeScale" value=".9,.9,.9"/>
+				<property name="ScopeRotation" value="3,0,0"/>
+				<property name="ScopeCameraOffset" value="0,-0.0005,0.15"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_subtract" value="0.2"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1">
+					<requirement name="ProgressionLevel" progression_name="perkSniperDamage" operation="Equals" value="1"/>
+					<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#@modfolder:Resources/2xmag.unity3d?2xmag" parent_transform="Attachments/Scope"/>
+			<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="2xmag" transform_path="RenderLens"/>
+			<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="2xmag" transform_path="RenderLens"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']"/>
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunScopeMedium" installable_tags="mediumTopAttachments" modifier_tags="scope" blocked_tags="shotgun" type="attachment">
+			<property name="UnlockedBy" value="modGunScopeMediumSchematic"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			
+			<item_property_overrides name="*">
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+
+
+			<item_property_overrides name="gunAK47">
+				<property name="ScopeOffset" value="0.001,0.088,-.2"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeRotation" value="1.3,0,0"/>
+				<property name="ScopeCameraOffset" value="0,-0.004,0.28"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunHuntingRifle">
+				<property name="ScopeOffset" value="0.001,0.071,0.005"/>
+				<property name="ScopeScale" value="0.9,0.9,0.9"/>
+				<property name="ScopeCameraOffset" value="0,-0.0165,-0.1"/>
+				<property name="ScopeRotation" value="0.3,0,0"/>
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="AutoReload" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunMR10">
+				<property name="ScopeOffset" value="0,0.0736,-0.1497"/>
+				<property name="ScopeScale" value="0.9,0.9,0.9"/>
+				<property name="ScopeCameraOffset" value="0.00096,-0.0034,-0.05"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunCrossbowIron">
+				<property name="ScopeOffset" value="0,0.061,-0.0761"/>
+				<property name="ScopeScale" value=".9,.9,.9"/>
+				<property name="ScopeCameraOffset" value="0.001,-0.0138,0.03"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+			<item_property_overrides name="gunCrossbowCompound">
+				<property name="ScopeOffset" value="0.0005,0.092,-0.06"/>
+				<property name="ScopeRotation" value="3,0,0"/>
+				<property name="ScopeCameraOffset" value="0.0005,-0.0085,0.02"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_subtract" value="0.35"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1">
+					<requirement name="ProgressionLevel" progression_name="perkSniperDamage" operation="Equals" value="1"/>
+					<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+				</passive_effect>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#@modfolder:Resources/4xmag.unity3d?4xmag" parent_transform="Attachments/Scope"/>
+			<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="4xmag" transform_path="RenderLens"/>
+			<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="4xmag" transform_path="RenderLens"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']"/>
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunScopeLarge" installable_tags="largeTopAttachments" modifier_tags="scope" blocked_tags="shotgun" type="attachment">
+			<property name="UnlockedBy" value="modGunScopeLargeSchematic"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			
+			<item_property_overrides name="*">
+				<property name="CrosshairOnAim" value="true"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+
+		<item_property_overrides name="gunHuntingRifle">
+			<property name="ScopeOffset" value="0,0.0715,0.03"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0.00014,-0.00915,-0.22"/>
+			<property name="CrosshairOnAim" value="false"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="ScopeOffset" value="0,0.0736,-0.1497"/>
+			<property name="ScopeScale" value="0.9,0.9,0.9"/>
+			<property name="ScopeCameraOffset" value="0.00014,0.00475,-0.08"/>
+			<property name="CrosshairOnAim" value="false"/>
+		</item_property_overrides>
+
+			<effect_group tiered="false">
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_subtract" value="0.6"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1">
+				<requirement name="ProgressionLevel" progression_name="perkSniperDamage" operation="Equals" value="1"/>
+				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+			</passive_effect>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#@modfolder:Resources/8xmag.unity3d?8xmag" parent_transform="Attachments/Scope"/>
+			<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="8xmag" transform_path="RenderLens"/>
+			<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="8xmag" transform_path="RenderLens"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+</VFX>

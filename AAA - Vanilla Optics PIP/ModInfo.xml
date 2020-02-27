@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xml>
+		<ModInfo>
+			<Name value="Vanilla Optics PIP"/>
+			<Description value="Replaces the vanilla 2x, 4x, and 8x optics with picture-in-picture versions."/>
+			<Author value="Sykriss"/>
+			<Version value="1.02"/>
+			<Website value=""/>
+		</ModInfo>
+	</xml>
