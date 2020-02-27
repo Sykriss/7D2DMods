@@ -24,7 +24,7 @@
 			<item_property_overrides name="gun44Magnum">
 				<property name="ScopeOffset" value="-0.0002,0.1,-0.02"/>
 				<property name="ScopeScale" value="1,1,1"/>
-				<property name="ScopeCameraOffset" value="0.0001,-.0046,0.1"/>
+				<property name="ScopeCameraOffset" value="0.0001,-.0062,0.04"/>
 			</item_property_overrides>
 			
 			<effect_group tiered="false">
