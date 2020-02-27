@@ -1,0 +1,10 @@
+<VRMR>
+	<append xpath="/recipes">
+		<recipe name="modGunPistolRMR" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="6"/>
+			<ingredient name="resourceScrapPolymers" count="6"/>
+			<ingredient name="resourceGlue" count="3"/>
+			<ingredient name="resourceElectricParts" count="6"/>
+		</recipe>
+	</append>
+</VRMR>

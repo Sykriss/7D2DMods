@@ -1,0 +1,8 @@
+<VRMR>
+	<append xpath="lootcontainers/lootgroup[@name='modGunT1']">
+		<item name="modGunPistolRMR"/>
+	</append>
+	<append xpath="lootcontainers/lootgroup[@name='schematicsModsCommon']">
+		<item name="modGunPistolRMRSchematic"/>
+	</append>
+</VRMR>

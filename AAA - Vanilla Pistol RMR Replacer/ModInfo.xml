@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xml>
+		<ModInfo>
+			<Name value="Vanilla Pistol RMR Replacer"/>
+			<Description value="Adds a new reflex sight, the 'Pistol RMR', and disables the ability for pistols to mount rifle reflex sights."/>
+			<Author value="Sykriss"/>
+			<Version value="1.1"/>
+			<Website value=""/>
+		</ModInfo>
+	</xml>

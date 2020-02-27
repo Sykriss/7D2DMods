@@ -1,0 +1,8 @@
+<VRMR>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='modGunT1']">
+		<item name="modGunPistolRMR"/>
+	</append>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
+		<item name="modGunPistolRMRSchematic"/>
+	</append>
+</VRMR>

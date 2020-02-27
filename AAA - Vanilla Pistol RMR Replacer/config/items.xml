@@ -1,0 +1,14 @@
+<VRMR>
+	<append xpath="/items">
+		<item name="modGunPistolRMRSchematic">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="pistolrmr"/>
+			<property name="Unlocks" value="modGunPistolRMR"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunPistolRMR" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+	</append>
+</VRMR>

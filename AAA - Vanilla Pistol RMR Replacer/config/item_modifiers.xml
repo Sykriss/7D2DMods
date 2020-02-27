@@ -1,0 +1,36 @@
+<VRMR>
+	<set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/@blocked_tags">bow, pistol, revolver</set>
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunPistolRMR" installable_tags="pistol, revolver" modifier_tags="scope" blocked_tags="shotgun" type="attachment">
+			<property name="UnlockedBy" value="modGunPistolRMRSchematic"/>
+			<property name="DescriptionKey" value="modGunPistolRMRDesc"/>
+			<property name="CustomIcon" value="pistolrmr"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+			
+			<item_property_overrides name="*">
+				<property name="CrosshairOnAim" value="false"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gunPistol">
+				<property name="ScopeOffset" value="-0.0002,0.075,-0.08"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,-0.00698,-0.06"/>
+			</item_property_overrides>
+
+			<item_property_overrides name="gun44Magnum">
+				<property name="ScopeOffset" value="-0.0002,0.1,-0.02"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0.0001,-.0046,0.1"/>
+			</item_property_overrides>
+			
+			<effect_group tiered="false">
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0.3"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#@modfolder:Resources/pistolrmr.unity3d?pistolrmr" parent_transform="Attachments/Scope"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+</VRMR>
