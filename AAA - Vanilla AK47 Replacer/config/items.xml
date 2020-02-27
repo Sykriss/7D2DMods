@@ -1,0 +1,11 @@
+<VAKREP>
+	<set xpath="/items/item[@name='gunAK47']/property[@name='Meshfile']/@value">#@modfolder:Resources/akm.unity3d?akm</set>
+	<set xpath="/items/item[@name='gunAK47']/property[@name='CrosshairOnAim']/@value">false</set>
+	<set xpath="/items/item[@name='gunAK47']/property[@class='Action1']/property[@name='ScopeCameraOffset']/@value">-0.00015,0.034,0.05</set>
+	<append xpath="/items/item[@name='gunAK47']/effect_group[@name='gunAK47']">
+		<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="shoot" value="true"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="shoot" value="false"/>
+		<triggered_effect trigger="onReloadStart" action="AnimatorSetBool" target="self" property="reload" value="true"/>
+		<triggered_effect trigger="onReloadStop" action="AnimatorSetBool" target="self" property="reload" value="false"/>
+	</append>
+</VAKREP>

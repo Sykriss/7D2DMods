@@ -1,0 +1,51 @@
+<VAKREP>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+		<item_property_overrides name="gunAK47">
+			<property name="SideOffset" value="0,0.02,0.09"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+		<item_property_overrides name="gunAK47">
+			<property name="SideOffset" value="0,0.015,0.09"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+		<item_property_overrides name="gunAK47">
+			<property name="Sound_start" value="ak47_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="Sound_loop" value="ak47_s_fire"/>
+			<property name="BarrelOffset" value="-0.001,-0.002,0.23"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+		<item_property_overrides name="gunAK47">
+			<property name="ScopeOffset" value="0,0.098,-0.14"/>
+			<property name="ScopeScale" value="0.63,0.63,0.63"/>
+			<property name="ScopeCameraOffset" value="0,0,.35"/>
+			<property name="CrosshairOnAim" value="false"/>
+		</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+		<item_property_overrides name="gunAK47">
+			<property name="ScopeOffset" value="0,0.098,-.2"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-0.04,0"/>
+		</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']">
+		<item_property_overrides name="gunAK47">
+			<property name="ScopeOffset" value="0,0.094,-.16"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-0.022,0"/>
+		</item_property_overrides>
+	</append>
+</VAKREP>
