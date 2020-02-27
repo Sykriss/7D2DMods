@@ -1,0 +1,22 @@
+<VFX>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+			<item_property_overrides name="gunAK47">
+				<property name="ScopeOffset" value="0,0.098,-.2"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeCameraOffset" value="0,0.0203,0.4"/>
+				<property name="ScopeRotation" value="1.3,0,0"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+	</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/item_property_overrides[@name='gunAK47']"/>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']">
+			<item_property_overrides name="gunAK47">
+				<property name="ScopeOffset" value="0.00089,0.098,-.2"/>
+				<property name="ScopeScale" value="1,1,1"/>
+				<property name="ScopeRotation" value="1.3,0,0"/>
+				<property name="ScopeCameraOffset" value="0,0.015,0.3"/>
+				<property name="CrosshairOnAim" value="false"/>
+			</item_property_overrides>
+	</append>
+</VFX>

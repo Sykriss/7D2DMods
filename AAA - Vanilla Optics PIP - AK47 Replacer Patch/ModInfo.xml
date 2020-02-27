@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xml>
+		<ModInfo>
+			<Name value="Vanilla Optics PIP - AK47 Replacer Patch"/>
+			<Description value="Patch for Sykriss' AK47 replacer for proper positioning of the new PIP scopes."/>
+			<Author value="Sykriss"/>
+			<Version value="1.0"/>
+			<Website value=""/>
+		</ModInfo>
+	</xml>
